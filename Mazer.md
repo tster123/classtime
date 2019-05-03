@@ -14,7 +14,7 @@ public class Mazer
    *  Each space in the maze has:
    *   - a 10% chance of containing a "|"
    *   - a 20% chance of containing a "/"
-   *   - a 20% chance of containing a "\\"
+   *   - a 20% chance of containing a "\"
    *  except that an obstacle may not be placed in position [r][c] if
    *  position [r][c-1] already contains an obstacle.
    *  Obstacles are placed from left to right in each row of the maze.
@@ -40,7 +40,7 @@ public class Mazer
 Write the constructor for the `Mazer` class. 
 The constructor initializes the maze instance variable to a two-dimensional array with the given number of rows and columns. 
 Each space in maze has a 10% chance of containing a "|", 
-a 20% chance of containing a "/" and a 20% chance of containing a "\\\\" except that a space may not contain an obstacle 
+a 20% chance of containing a "/" and a 20% chance of containing a "\" except that a space may not contain an obstacle 
 if the space one column to the left already contains an obstacle. 
 Obstacles are placed from left to right in each row of maze.
 
@@ -48,11 +48,11 @@ For example, a `Mazer` object created with the call `new Mazer(5, 8)` could have
 
 | |0|1|2|3|4|5|6|7|
 |-|-|-|-|-|-|-|-|-|
-|0|null|null|"\\\\"|null|null|null|null|"/"|
+|0|null|null|"\"|null|null|null|null|"/"|
 |1|null|null|"/"|null|null|null|null|null|
-|2|null|"\\\\"|null|null|null|"/"|null|null|
-|3|"&#x7c;"|null|null|"/"|null|"\\\\"|null|null|
-|4|null|null|null|null|"/"|null|"\\\\"|null|
+|2|null|"\"|null|null|null|"/"|null|null|
+|3|"&#x7c;"|null|null|"/"|null|"\"|null|null|
+|4|null|null|null|null|"/"|null|"\"|null|
 
 Complete the Mazer constructor below.
 ```
@@ -60,7 +60,7 @@ Complete the Mazer constructor below.
    *  Each space in the maze has:
    *   - a 10% chance of containing a "|"
    *   - a 20% chance of containing a "/"
-   *   - a 20% chance of containing a "\\"
+   *   - a 20% chance of containing a "\"
    *  except that an obstacle may not be placed in position [r][c] if
    *  position [r][c-1] already contains an obstacle.
    *  Obstacles are placed from left to right in each row of the maze.
@@ -81,7 +81,7 @@ The player starts on the left side of the maze (column 0) at the given row (star
 |Obstacle|Effect|
 |--------|------|
 |"/"|The player moves one row higher in the maze. (The player’s row position is decreased by 1.)|
-|"\\\\"|The player moves one row lower in the maze. (The player’s row position is increased by 1.)|
+|"\"|The player moves one row lower in the maze. (The player’s row position is increased by 1.)|
 |"&#x7c;"|The player loses.|
 
 2. If the player’s row is not valid in the maze the player loses.
@@ -95,11 +95,11 @@ Obstacles are shown but the value `null`, representing an empty space, is not sh
 
 | |0|1|2|3|4|5|6|7|
 |-|-|-|-|-|-|-|-|-|
-|0|P0|P0|P0 "\\\\"|P1|P1|P1|P1|"/" P1|
+|0|P0|P0|P0 "\"|P1|P1|P1|P1|"/" P1|
 |1|P1|P1|P1 "/"|P0|P0|P0|P0 P2|P0 P2|
-|2|P2|P2 "\\\\"| | |P2|P2 "/"| | | 
-|3|P3 "|"| |P2|P2 "/"| |P4 "\\\\"| | |
-|4|P4|P4|P4|P4|P4 "/"| |P4 "\\\\"| |
+|2|P2|P2 "\"| | |P2|P2 "/"| | | 
+|3|P3 "|"| |P2|P2 "/"| |P4 "\"| | |
+|4|P4|P4|P4|P4|P4 "/"| |P4 "\"| |
 
 A player starting at row 0 would win because the player’s column index would become 8 on the player’s 8th turn. A player starting at row 2 would win for the same reason.
 
