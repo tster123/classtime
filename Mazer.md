@@ -98,7 +98,7 @@ Obstacles are shown but the value `null`, representing an empty space, is not sh
 |0|P0|P0|P0 "\\"|P1|P1|P1|P1|"/" P1|
 |1|P1|P1|P1 "/"|P0|P0|P0|P0 P2|P0 P2|
 |2|P2|P2 "\\"| | |P2|P2 "/"| | | 
-|3|P3 "|"| |P2|P2 "/"| |P4 "\\"| | |
+|3|P3 "&#x7c;"| |P2|P2 "/"| |P4 "\\"| | |
 |4|P4|P4|P4|P4|P4 "/"| |P4 "\\"| |
 
 A player starting at row 0 would win because the player’s column index would become 8 on the player’s 8th turn. A player starting at row 2 would win for the same reason.
